@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What is CSS?</title>
+</head>
+<body>
+
+	<header>
+		<h1>JAMESTAR KEE NAVARRO</h1>
+		
+		<nav>
+			<ul>
+				<li><a href="index.htm"> HOME</a></li>
+				<li><a href="blog-one.html"> BLOG 1</a></li>
+				<li><a href="blog-two.html"> BLOG 2</a></li>
+				<li><a href="blog-three.html"> BLOG 3</a></li>	
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		
+		<h2>Understanding CSS</h2>
+		<p>Posted by <b>Jamestar Kee Navarro</b></p>
+
+		<h2>What is CSS?</h2>
+
+		<p><strong>Cascading Style Sheets (CSS)</strong> is a style sheet language used for specifying the presentation and styling of a document written in a markup language, such as HTML or XML (including XML dialects such as SVG, MathML, or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside <strong>HTML</strong> and <strong>JavaScript</strong>.</p>
+
+		<p>CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts. This separation can improve content accessibility, since the content can be written without concern for its presentation; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+
+		<p>Separation of formatting and content also makes it feasible to present the same markup page in different styles for different rendering methods, such as on-screen, in print, by voice (via speech-based browser or screen reader), and on Braille-based tactile devices. CSS also has rules for alternative formatting if the content is accessed on a mobile device.</p>
+
+		<p>The name cascading comes from the specified priority scheme to determine which declaration applies if more than one declaration of a property match a particular element. This cascading priority scheme is predictable.</p>
+
+		<h2>Syntax</h2>
+		<p>CSS has a simple syntax and uses a number of English keywords to specify the names of various style properties.</p>
+
+		<h3>Stylesheet</h3>
+		<p>A style sheet consists of a list of rules. Each rule or rule-set consists of one or more <emp>selectors</emp>, and a <emp>declaration block</emp>.</p>
+
+		<h3>Selector</h3>
+		<p>In CSS, selectors declare which part of the markup a style applies to by matching tags and attributes in the markup itself.</p>
+
+			<h4>Selector types</h4>
+			<p>Selectors may apply to the following:</p>
+
+			<ul>
+				<li>all elements of a specific type, e.g. the second-level headers h2</li>
+				<li>elements specified by attribute, in particular:
+					<ul>
+						<li>id: an identifier unique within the document, denoted in the selector language by a hash prefix e.g. #id</li>
+						<li>class: an identifier that can annotate multiple elements in a document, denoted by a dot prefix e.g. .classname (the phrase "CSS class", although sometimes used, is a misnomer, as element classes—specified with the HTML class attribute—is a markup feature that is distinct from browsers' CSS subsystems, and the related W3C/WHATWG standards work on document styles</li>
+					</ul>
+				</li>
+				<li>elements depending on how they are placed relative to others in the document tree.</li>
+			</ul>
+
+			<p>Classes and IDs are case-sensitive, start with letters, and can include alphanumeric characters, hyphens, and underscores. A class may apply to any number of instances of any element. An ID may only be applied to a single element.</p>
+
+			<h4>Pseudo-classes</h4>
+			<p>Pseudo-classes are used in CSS selectors to permit formatting based on information that is not contained in the document tree.</p>
+
+			<p>One example of a widely used pseudo-class is :hover, which identifies content only when the user "points to" the visible element, usually by holding the mouse cursor over it. It is appended to a selector as in a:hover or #elementid:hover.</p>
+
+			<p>A pseudo-class classifies document elements, such as :link or :visited, whereas a pseudo-element makes a selection that may consist of partial elements, such as ::first-line or ::first-letter. Note the distinction between the double-colon notation used for pseudo-elements and the single-colon notation used for pseudo-classes.</p>
+
+			<h4>Combinators</h4>
+			<p>Multiple simple selectors may be joined using combinators to specify elements by location, element type, id, class, or any combination thereof. The order of the selectors is important. For example, div .myClass {color: red;} applies to all elements of class myClass that are inside div elements, whereas .myClass div {color: red;} applies to all div elements that are inside elements of class myClass. This is not to be confused with concatenated identifiers such as div.myClass {color: red;} which applies to div elements of class myClass.</p>
+
+		<h3>Declaration block</h3>
+		<p>A declaration block consists of a pair of braces ({}) enclosing a semicolon-separated list of declarations.</p>	
+
+			<h4>Declaration</h4>
+			<p>Each declaration itself consists of a property, a colon (:), and a value. Optional white-space may be around the declaration block, declarations, colons, and semi-colons for readability</p>
+
+			<h4>Properties</h4>
+			<p>Properties are specified in the CSS standard. Each property has a set of possible values. Some properties can affect any type of element, and others apply only to particular groups of elements</p>
+
+			<h4>Values</h4>
+			<p>Values may be keywords, such as "center" or "inherit", or numerical values, such as 200px (200 pixels), 50vw (50 percent of the viewport width) or 80% (80 percent of the parent element's width).</p>
+
+			<p>Color values can be specified with keywords (e.g. "red"), hexadecimal values (e.g. #FF0000, also abbreviated as #F00), RGB values on a 0 to 255 scale (e.g. rgb(255, 0, 0)), RGBA values that specify both color and alpha transparency (e.g. rgba(255, 0, 0, 0.8)), or HSL or HSLA values (e.g. hsl(0 100% 50%), hsl(0 100% 50% / 0.8)).</p>
+
+			<p>Non-zero numeric values representing linear measures must include a length unit, which is either an alphabetic code or abbreviation, as in 200px or 50vw; or a percentage sign, as in 80%. Some units – cm (centimetre); in (inch); mm (millimetre); pc (pica); and pt (point) – are absolute, which means that the rendered dimension does not depend upon the structure of the page; others – em (em); ex (ex) and px (pixel)[clarification needed] – are relative, which means that factors such as the font size of a parent element can affect the rendered measurement. These eight units were a feature of CSS 1 and retained in all subsequent revisions. The proposed CSS Values and Units Module Level 3 will, if adopted as a W3C Recommendation, provide seven further length units: ch; Q; rem; vh; vmax; vmin; and vw</p>
+
+		<h3>Specificity</h3>
+		<p>Specificity refers to the relative weights of various rules. It determines which styles apply to an element when more than one rule could apply. Based on the specification, a simple selector (e.g. H1) has a specificity of 1, class selectors have a specificity of 1,0, and ID selectors have a specificity of 1,0,0. Because the specificity values do not carry over as in the decimal system, commas are used to separate the "digits" (a CSS rule having 11 elements and 11 classes would have a specificity of 11,11, not 121).</p>
+
+		<p>Thus the selectors of the following rule result in the indicated specificity:</p>
+
+		<table border="1">
+			<tr>
+				<th>Selectors</th>
+				<th>Specificity</th>
+			</tr>
+			<tr>
+				<td>h1 {color: white;}</td>
+				<td>0, 0, 0, 1</td>
+			</tr>
+			<tr>
+				<td>p em {color: green;}</td>
+				<td>0, 0, 0, 2</td>
+			</tr>
+			<tr>
+				<td>.grape {color: red;}</td>
+				<td>0, 0, 1, 0</td>
+			</tr>
+			<tr>
+				<td>p.bright {color: blue;}</td>
+				<td>0, 0, 1, 1</td>
+			</tr>
+			<tr>
+				<td>p.bright em.dark {color: yellow;}</td>
+				<td>0, 0, 2, 2</td>
+			</tr>
+			<tr>
+				<td>#id218 {color: brown;}</td>
+				<td>0, 1, 0, 0</td>
+			</tr>
+		</table>
+
+		<h3>Inheritance</h3>
+		<p>Inheritance is a key feature in CSS; it relies on the ancestor-descendant relationship to operate. Inheritance is the mechanism by which properties are applied not only to a specified element but also to its descendants. Inheritance relies on the document tree, which is the hierarchy of XHTML elements in a page based on nesting. Descendant elements may inherit CSS property values from any ancestor element enclosing them. In general, descendant elements inherit text-related properties, but their box-related properties are not inherited. Properties that can be inherited are color, font, letter spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space, and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height, and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align, and z-index.</p>
+
+		<p>Inheritance can be used to avoid declaring certain properties over and over again in a style sheet, allowing for shorter CSS.</p>
+
+		<p>Inheritance in CSS is not the same as inheritance in class-based programming languages, where it is possible to define class B as "like class A, but with modifications". With CSS, it is possible to style an element with "class A, but with modifications". However, it is not possible to define a CSS class B like that, which could then be used to style multiple elements without having to repeat the modifications.</p>
+	
+		<h3>Positioning</h3>
+
+		<dl>
+			<dt><b>Normal flow</b></dt>
+			<dd>Inline items are laid out in the same way as the letters in words in the text, one after the other across the available space until there is no more room, then starting a new line below. Block items stack vertically, like paragraphs and like the items in a bulleted list. Normal flow also includes the relative positioning of block or inline items and run-in boxes.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Floats</b></dt>
+			<dd>A floated item is taken out of the normal flow and shifted to the left or right as far as possible in the space available. Other content then flows alongside the floated item.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Absolute positioning</b></dt>
+			<dd>An absolutely positioned item has no place in, and no effect on, the normal flow of other items. It occupies its assigned position in its container independently of other items.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Position property</b></dt>
+			<dd>There are five possible values of the position property. If an item is positioned in any way other than static, then the further properties top, bottom, left, and right are used to specify offsets and positions.The element having position static is not affected by the top, bottom , left or right properties.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Static</b></dt>
+			<dd>The default value places the item in the normal flow.</dd>
+		</dl>
+
+
+		<dl>
+			<dt><b>Relative</b></dt>
+			<dd>The item is placed in the normal flow, and then shifted or offset from that position. Subsequent flow items are laid out as if the item had not been moved.</dd>
+		</dl>	
+
+		<dl>
+			<dt><b>Absolute</b></dt>
+			<dd>Specifies absolute positioning. The element is positioned in relation to its nearest non-static ancestor.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Fixed</b></dt>
+			<dd>The item is absolutely positioned in a fixed position on the screen even as the rest of the document is scrolled[</dd>
+		</dl>
+
+		<dl>
+			<dt><b>Float and clear</b></dt>
+			<dd>The float property may have one of three values. Absolutely positioned or fixed items cannot be floated. Other elements normally flow around floated items, unless they are prevented from doing so by their clear property.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>left</b></dt>
+			<dd>The item floats to the left of the line that it would have appeared in; other items may flow around its right side.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>right</b></dt>
+			<dd>The item floats to the right of the line that it would have appeared in; other items may flow around its left side.</dd>
+		</dl>
+
+		<dl>
+			<dt><b>clear</b></dt>
+			<dd>Forces the element to appear underneath ('clear') floated elements to the left (clear:left), right (clear:right) or both sides (clear:both).</dd>
+		</dl>
+	</man>
+
+	
+	<footer>
+		<aside>
+			<h4>Related posts</h4>
+			<ul>
+				<li><a href="blog-one.html"><b>What is CSS?</b></a></li>
+				<p>By Jamestar Kee Navarro</p>
+
+				<li><a href="blog-two.html"><b>What is JavaScript?</b></a></li>
+				<p>By Jamestar Kee Navarro</p>
+
+				<li><a href="blog-three.html"><b>What is a Web Framework?</b></a></li>
+				<p>By Jamestar Kee Navarro</p>
+			</ul>
+		</aside>
+
+		<p>Copyright &copy; 2030 by Jamestar Kee Navarro All Rights Reserved</p>
+	</footer>
+
+</body>
+</html>
